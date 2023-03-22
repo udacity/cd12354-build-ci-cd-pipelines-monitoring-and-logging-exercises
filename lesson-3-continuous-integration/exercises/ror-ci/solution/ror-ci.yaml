@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: lesson-3-continuous-integration/exercises/starter/udacity-blog
+        working-directory: lesson-3-continuous-integration/ror-ci/exercises/starter/udacity-blog
 
     steps:
       - name: Checkout code
