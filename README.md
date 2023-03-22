@@ -6,9 +6,10 @@ This repo is meant to be used to keep things organized during content developmen
 
 ### Lesson Folder
 
-This repo contains a folder for each `lesson` and one `project` folder.
+This repo contains a folder for each `lesson`
 
 Example
+
 ```
 lesson-1-hello
 lesson-2-world
@@ -20,6 +21,7 @@ project
 Each `lesson` folder is named using the naming convention of `lesson-#-name-of-lesson`.
 
 Example
+
 ```
 lesson-1-hello
 ```

@@ -1,0 +1,39 @@
+name: Ruby on Rails CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  RUBY_VERSION: 3.0.0
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lesson-3-continuous-integration/exercises/starter/udacity-blog
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Setup database
+        run: |
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+
+      - name: Run tests
+        run: |
+          bundle exec rails test
