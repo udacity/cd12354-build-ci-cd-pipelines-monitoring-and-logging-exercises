@@ -6,15 +6,14 @@ on:
 
 env:
   RUBY_VERSION: 3.1.1
-
+  WORKING_DIR: lesson-3-continuous-integration/exercises/ror-ci/starter/udacity-blog
 jobs:
   lint:
     name: Run linter
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: lesson-3-continuous-integration/exercises/ror-ci/starter/udacity-blog
-
+        working-directory: ${{ env.WORKING_DIR }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -39,8 +38,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: lesson-3-continuous-integration/exercises/starter/udacity-blog
-
+        working-directory: ${{ env.WORKING_DIR }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
