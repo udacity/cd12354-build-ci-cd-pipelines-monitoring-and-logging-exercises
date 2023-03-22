@@ -31,7 +31,7 @@ jobs:
 
       - name: Run linter
         run: |
-          bundle exec rails test
+          rubocop
 
   test:
     name: Run test
