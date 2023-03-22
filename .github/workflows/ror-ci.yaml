@@ -8,7 +8,8 @@ env:
   RUBY_VERSION: 3.1.1
 
 jobs:
-  build:
+  lint:
+    name: Run linter
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -22,6 +23,33 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
+
+      - name: Install dependencies
+        run: |
+          gem install bundler
+          bundle install
+
+      - name: Run linter
+        run: |
+          bundle exec rails test
+
+  test:
+    name: Run test
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: lesson-3-continuous-integration/exercises/starter/udacity-blog
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+          bundler-cache: true
 
       - name: Install dependencies
         run: |

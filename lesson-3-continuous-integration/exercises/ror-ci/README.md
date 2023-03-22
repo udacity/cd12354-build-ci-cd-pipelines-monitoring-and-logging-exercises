@@ -8,11 +8,16 @@ Due to some possible issues with where mkdir is expected, it seems necessary to 
 ln -s /bin/mkdir /usr/bin/mkdir
 ```
 
-Commands used to setup the project AFTER the initial setup of the environment
+Commands used to setup the app project AFTER the initial setup of the environment
 
 ```bash
+# DON'T RUN THESE COMMANDS
+# ONLY FOR DOCUMENTATION PURPOSES
+cd starter
 gem install rails
 rails new udacity-blog
+bundle add rubocop
+rubocop --auto-gen-config
 ```
 
 ## Instructions
@@ -84,7 +89,7 @@ These steps will help you build the application and verify that the correct vers
 Start by navigating to the project folder, as the following commands should all be run from there.
 
 ```bash
-cd udacity-blog
+cd starter/udacity-blog
 ```
 
 Use the following command to install the project dependencies
@@ -118,4 +123,12 @@ Then you can run the tests
 
 ```bash
 bundle exec rails test
+```
+
+### Run lint
+
+After the dependencies are installed and tests are successful, you should be able to run the following command to ensure code style is consistent across the application
+
+```bash
+rubocop
 ```
