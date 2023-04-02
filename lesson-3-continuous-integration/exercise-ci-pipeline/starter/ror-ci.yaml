@@ -1,0 +1,38 @@
+name: Ruby on Rails CI
+
+on:
+  # Configure the trigger here
+
+jobs:
+  lint:
+    name: # Name your job here
+    runs-on: # What OS should you use?
+    steps:
+      # Always checkout your code first
+      - name: Checkout code
+
+      # Setup any languages or binaries
+      # Maybe another action https://github.com/ruby/setup-ruby
+      - name: Set up Ruby
+
+      # Install your dependencies
+      # Keep in mind that by default, you'll be working in the
+      # root directory of the repository, so you might need to change directory here
+      - name: Install dependencies
+
+      # Run your desired operation
+      - name: Run linter
+
+  test:
+    name: # Name your job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+
+      - name: Set up Ruby
+
+      - name: Install dependencies
+
+      - name: Setup database
+
+      - name: Run tests

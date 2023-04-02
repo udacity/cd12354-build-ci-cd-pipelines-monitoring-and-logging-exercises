@@ -7,7 +7,8 @@ on:
 
 env:
   RUBY_VERSION: 3.1.1
-  WORKING_DIR: lesson-3-continuous-integration/exercise-ci-pipeline/udacity-blog
+  WORKING_DIR: lesson-3-continuous-integration/exercise-ci-pipeline/udacity-blog-app
+
 jobs:
   lint:
     name: Run linter
@@ -31,8 +32,7 @@ jobs:
           bundle install
 
       - name: Run linter
-        run: |
-          rubocop
+        run: rubocop
 
   test:
     name: Run test
@@ -61,5 +61,4 @@ jobs:
           bundle exec rails db:migrate
 
       - name: Run tests
-        run: |
-          bundle exec rails test
+        run: bundle exec rails test
