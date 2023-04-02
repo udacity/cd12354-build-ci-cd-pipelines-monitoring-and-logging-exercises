@@ -48,7 +48,7 @@ The following steps are required to be run only once to create your repository t
 6. Create your public repository and push the initial changes (it needs to be public to allow Github Actions to run for free):
    1. `gh repo create udacity-build-cicd-lessons --source=. --public --push`
 
-Going forward, as you work on the lessons, you won't need to do create or initialize the repo again. You'll just need to make changes to your workflows in the `github/workflows` folder, and perform `git add .` and `git push` commands to make the files available in your repository and view your actions in the Github Actions interface.
+Going forward, as you work on the lessons, you won't need to create or initialize the repo again. You'll just need to make changes to your workflows in the `.github/workflows` folder, and perform `git add .` and `git push` commands to make the files available in your repository and view your actions in the Github Actions interface.
 
 ## Dependencies
 

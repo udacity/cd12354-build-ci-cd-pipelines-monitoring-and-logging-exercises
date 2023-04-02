@@ -8,18 +8,6 @@ Due to some possible issues with where mkdir is expected, it seems necessary to 
 ln -s /bin/mkdir /usr/bin/mkdir
 ```
 
-Commands used to setup the app project AFTER the initial setup of the environment
-
-```bash
-# DON'T RUN THESE COMMANDS
-# ONLY FOR DOCUMENTATION PURPOSES
-cd starter
-gem install rails
-rails new udacity-blog
-bundle add rubocop
-rubocop --auto-gen-config
-```
-
 ## Instructions
 
 The exercise assumes you'll be working in the Udacity workspace where all the necessary system dependencies are installed and setup, ready for use.
@@ -38,7 +26,7 @@ These steps will help you build the application and verify that the correct vers
 Start by navigating to the project folder, as the following commands should all be run from there.
 
 ```bash
-cd starter/udacity-blog-app
+cd lesson-3-continuous-integration/starter/udacity-blog-app
 ```
 
 Use the following command to install the project dependencies
