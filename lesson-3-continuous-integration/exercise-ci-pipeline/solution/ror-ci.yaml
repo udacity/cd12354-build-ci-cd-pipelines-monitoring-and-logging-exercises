@@ -7,7 +7,7 @@ on:
 
 env:
   RUBY_VERSION: 3.1.1
-  WORKING_DIR: lesson-3-continuous-integration/exercises/ror-ci/starter/udacity-blog
+  WORKING_DIR: lesson-3-continuous-integration/exercise-ci-pipeline/udacity-blog
 jobs:
   lint:
     name: Run linter

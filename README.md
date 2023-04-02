@@ -1,39 +1,10 @@
-# Purpose of This Repo
+# Overview
 
-This repo is meant to be used to keep things organized during content development and act as the source of truth for all projects and exercises related to this course.
+This repo contains the lesson material for the Build CI/CD Pipelines course. In it, you'll find folders for each lesson and their corresponding exercises. The exercise folder will contain the following:
 
-## Folder Structure
+1. A README.md to provide further details and instructions
+2. A starter folder with any files or templates you should use to start your work
+3. A solution folder that contains a working solution to the exercise that will be reviewed in the classroom
+4. Other supplemental material like a frontend or backend application, will be provided in the root of the exercise folder. This is important to keep in mind when running commands in the pipeline.
 
-### Lesson Folder
-
-This repo contains a folder for each `lesson`
-
-Example
-
-```
-lesson-1-hello
-lesson-2-world
-lesson-3-foo
-lesson-4-bar
-project
-```
-
-Each `lesson` folder is named using the naming convention of `lesson-#-name-of-lesson`.
-
-Example
-
-```
-lesson-1-hello
-```
-
-Four lesson folders have been provided as a template; However, you may need to add more or possibly use less than four depending on what is needed.
-
-If you require an additional lesson folder, you can make a copy of the folder and paste it into the root directory.
-
-### Exercises Folder
-
-Each `lesson` folder contains an `exercises` folder. This `exercises` folder should contain all files and instructions necessary for the exercises along with the solution. The solutions for these exercises will be shared with students. See the `README` in the `exercises` folder for information about folder structure.
-
-### Project Folder
-
-The `project` folder should contain all files and instructions necessary for setup. If possible, a set of instructions should be provided for both Udacity workspaces and a way to work locally (for both MacOS and Windows OS). At a minimum, one set of instructions should be provided. A `README` template has been provided in the project folder. This template layout should be used to write your README.
+As you work on each lesson, remember that in order for the Github Actions to trigger your workflow, the workflow files must be in the root of your repository under the `.github/workflows` folder. It is **highly recommended** to either disable any workflows you are done with (by commenting the entire file) as there is a **2000 minute limit per month** for Github Actions for public repositories.
