@@ -10,45 +10,71 @@ This repo contains the lesson material for the Build CI/CD Pipelines course. In 
 As you work on each lesson, remember that in order for the Github Actions to trigger your workflow, the workflow files must be in the root of your repository under the `.github/workflows` folder. It is **highly recommended** to either remove or disable any workflows you are done with (by commenting the entire file) as there is a **2000 minute limit per month** for Github Actions for public repositories. We've kept the operations with reasonable limits that you can make numerous attempts at fixing and improving your pipeline. Below are the estimated run times for each exercise.
 
 Estimated run times for each workflow:
+
 Lesson 3 exercise:
-**Lint job:** ~ 30s
-**Test job:** ~ 30s
-**Total workflow:** ~ 1 min
+
+* **Lint job:** ~ 30s
+* **Test job:** ~ 30s
+* **Total workflow:** ~ 1 min
 
 Lesson 4 exercise:
 
 ## Instructions and one-time setup
 
 The exercises assume you'll be working in the Udacity workspace where all the necessary system dependencies are installed and setup, ready for use.
-The following steps are required to be run only once to create your repository that you'll use for lessons for the entirety of this course. A good repo name to use might be `udacity-build-cicd-lessons`
-
-1. Login to Github using the `gh auth login` command
-   1. Select `Github.com`
-   2. Select `HTTPS`
-   3. Enter `Y` or just press **Enter** to authenticate with Github credentials
-   4. Select **Login with a web browser**
-   5. Highlight and copy the one-time code then press **Enter** to open the browser
-   6. If VSCode pops-up with a warning, click **Open**
-   7. Enter your Github credentials at the login page
+The following steps are required to be run only once to initialize and create your repository with all the files that you'll use for the lessons in this course.
+### Login
+Launch the Udacity workspace and open the terminal in VSCode to start executing the following commands:
+1. Start the login process with `gh`
+```bash
+gh auth login
+```
+   2. Select `Github.com`
+   3. Select `HTTPS`
+   4. Enter `Y` or just press **Enter** to authenticate with Github credentials
+   5. Select **Login with a web browser**
+   6. Highlight and copy the one-time code then press **Enter** to open the browser
+   7. If VSCode pops-up with a warning, click **Open**
+   8. Enter your Github credentials at the login page
       1. You may need to perform your 2FA step next
-   8. Paste in the one-time code that was given on the CLI prompt and click **Continue**
+   9. Paste in the one-time code that was given on the CLI prompt and click **Continue**
       1. If you're prompted for authorizing access to any organizations, you don't have to do that. The `gh` cli for this course just needs to be able to create repos in your personal account.
-   9. Click authorize to allow the Github CLI to access your repository information.
-   10. You can close the Github window and go back to the Udacity workspace tab
+   10. Click authorize to allow the Github CLI to access your repository information.
+   11. You can close the Github window and go back to the Udacity workspace tab
 
-2. Setup git with your email address
-   1. `git config --global user.email "YOUR_EMAIL"`
-   2. If you want to use your Github provided `noreply` email, follow [these instructions](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-on-github)
-3. Initialize the workspace as a git repository
-   1. `git init`
-4. Stage the workspace files for committing
-   1. `git add .`
-5. Commit the workspace files
-   1. `git commit -m "initial"`
-6. Create your public repository and push the initial changes (it needs to be public to allow Github Actions to run for free):
-   1. `gh repo create udacity-build-cicd-lessons --source=. --public --push`
+### Configuration
+Next you'll need to configure git to use your desired email.
 
-Going forward, as you work on the lessons, you won't need to create or initialize the repo again. You'll just need to make changes to your workflows in the `.github/workflows` folder, and perform `git add .` and `git push` commands to make the files available in your repository and view your actions in the Github Actions interface.
+If you already know what email you'd like to use, great! If you'd like to use the `noreply` email address that Github offers, follow [these instructions](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address#setting-your-commit-email-address-on-github)
+
+**Configure git with your email address**
+```bash
+git config --global user.email "YOUR_EMAIL"
+```
+   
+Now we'll finish up by initializing the repository and using the `gh` command to push the files to a new repository under you Github account. The last command uses `udacity-build-cicd-lessons` as the repository name, but you can change this to be whatever you'd like that doesn't conflict with an existing repo name in your account.
+
+**Initialize the workspace as a git repository**
+```bash
+git init
+```
+   
+**Stage the workspace files for committing**
+```bash
+git add .
+```
+   
+**Commit the workspace files**
+```bash
+git commit -m "initial"
+```
+   
+**Create your public repository and push the initial changes (it needs to be public to allow Github Actions to run for free)**
+```bash
+gh repo create udacity-build-cicd-lessons --source=. --public --push
+```
+
+As you work on the lessons going forward, you won't need to create or initialize the repo again. You'll just need to make changes to your workflows in the `.github/workflows` folder, and perform `git add .` `git commit` and `git push` commands to make the files available in your repository and view your actions in the Github Actions interface.
 
 ## Dependencies
 
