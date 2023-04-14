@@ -64,7 +64,9 @@ rubocop
 
 ## Initial steps for local setup
 
-If you'd like to work on your machine locally, we highly recommend the `rvm` tool to control the version of the `ruby` language you're running. Below are the example commands that can be used, but you can always refer to [this site](https://rvm.io/rvm/install) for system specific instructions or in case you encounter issues. The commands under this heading are all one-time commands. Once `rvm` and `ruby` are working, you won't need to do these steps again in the workspace
+If you'd like to work on your machine locally, we highly recommend the `rvm` tool to control the version of the `ruby` language you're running. Below are the steps, but you can always refer to [this site](https://rvm.io/rvm/install) for system specific instructions or in case you encounter issues. The commands under this heading are all one-time commands. Once `rvm` and `ruby` are working, you won't need to do these steps again in the workspace. 
+
+Additionally, you won't need to accomplish these steps in your Github Action workflow. There's a [custom action you can utilize to setup ruby](https://github.com/ruby/setup-ruby#usage)
 
 Setup the gpg keys
 
