@@ -62,7 +62,7 @@ After the dependencies are installed and tests are successful, you should be abl
 rubocop
 ```
 
-## Initial steps for local setup
+## Initial setup
 
 If you'd like to work on your machine locally, we highly recommend the `rvm` tool to control the version of the `ruby` language you're running. Below are the steps, but you can always refer to [this site](https://rvm.io/rvm/install) for system specific instructions or in case you encounter issues. The commands under this heading are all one-time commands. Once `rvm` and `ruby` are working, you won't need to do these steps again in the workspace. 
 
