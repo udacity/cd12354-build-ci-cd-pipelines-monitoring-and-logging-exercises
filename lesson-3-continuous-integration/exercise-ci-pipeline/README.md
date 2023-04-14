@@ -10,7 +10,7 @@ Start by copying the `ror-ci.yaml` that's located in the `starter` folder and pa
 
 ## The Developer Notes
 
-You've just accepted a position on a new development team that loves using Ruby on Rails for all their development work. They'd love to get a new Continuous Integration system setup that will automatically build their application and run their tests whenever they open up a Pull Request against the `main` branch. Below, you'll find some useful notes that the development team has provided for you to get started. The following are intended to be run within the Udacity provided workspace.
+You've just accepted a position on a new development team that loves using Ruby on Rails for all their development work. They'd love to get a new Continuous Integration system setup that will automatically build their application and run their tests whenever they open up a Pull Request against the `main` branch. Below, you'll find some useful notes that the development team has provided for you to get started. The following are intended to be run within the Udacity provided workspace to test the commands.
 
 ### Install project dependencies
 
