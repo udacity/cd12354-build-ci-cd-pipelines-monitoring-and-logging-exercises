@@ -4,7 +4,7 @@
 
 The exercise assumes you'll be working in the Udacity workspace where all the necessary system dependencies are installed and setup, ready for use.
 
-Make sure you've already completed the `Instructions and one-time setup` and outlined in the [root README](../../README.md#instructions-and-one-time-setup)
+Make sure you've already completed the `Instructions and one-time setup` that is outlined [here](../../README.md#instructions-and-one-time-setup)
 
 Start by copying the `ror-ci.yaml` that's located in the `starter` folder and paste it into the `.github/workflows` in the root of this project. This is the folder location where Github looks for Github Action workflows.
 
