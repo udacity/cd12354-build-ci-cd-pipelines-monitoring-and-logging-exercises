@@ -1,13 +1,5 @@
 # Overview
 
-## Workspace notes
-
-Due to some possible issues with where mkdir is expected, it seems necessary to setup the Udacity workspace with this command already having run so that `make` can complete. [Refererence](https://stackoverflow.com/questions/61899655/installing-tiny-tds-gem-on-ubuntu-20-04-fails/62169578#62169578)
-
-```bash
-ln -s /bin/mkdir /usr/bin/mkdir
-```
-
 ## Instructions
 
 The exercise assumes you'll be working in the Udacity workspace where all the necessary system dependencies are installed and setup, ready for use.
