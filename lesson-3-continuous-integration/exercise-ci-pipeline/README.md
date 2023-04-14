@@ -18,7 +18,7 @@ These steps will help you build the application and verify that the correct vers
 Start by navigating to the project folder, as the following commands should all be run from there.
 
 ```bash
-cd lesson-3-continuous-integration/udacity-blog-app
+cd lesson-3-continuous-integration/exercise-ci-pipeline/udacity-blog-app
 ```
 
 Use the following command to install the project dependencies
