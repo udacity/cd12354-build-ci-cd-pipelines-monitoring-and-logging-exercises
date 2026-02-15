@@ -1,6 +1,6 @@
 # Overview
 
-This repo contains the lesson material for the Build CI/CD Pipelines course. In it, you'll find folders for each lesson and their corresponding exercises. The exercise folder will contain the following:
+This repo contains the lesson material for the Build CI/CD Pipelines course. In it, you'll find folders for each lesson and their corresponding exercises and demos. The exercise folder will contain the following:
 
 1. A `README.md` to provide details and instructions for the lesson
 2. A starter folder with any files or templates you should use to start your work

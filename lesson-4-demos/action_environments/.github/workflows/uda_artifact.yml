@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: Create S3 bucket with parameters
+
+Resources:
+  ArtifactBucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: website-artifacts
+      WebsiteConfiguration:
+        IndexDocument: index.html
+        ErrorDocument: error.html
+
+Outputs:
+  ArtifactBucketName:
+    Description: Name of the S3 bucket
+    Value: !Ref ArtifactBucket
+    Export:
+      Name: ArtifactBucketName
+  ArtifactBucketWebsiteURL:
+    Description: URL of the S3 bucket website
+    Value: !GetAtt ArtifactBucket.WebsiteURL
+    Export:
+      Name: ArtifactBucketWebsiteURL

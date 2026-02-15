@@ -1,0 +1,46 @@
+name: Dynamic Workflow and Upload Files
+on:
+  workflow_dispatch:
+    inputs:
+      index_document:
+        description: 'Name of the index document'
+        required: true
+        default: 'index.html'
+      error_document:
+        description: 'Name of the error document'
+        required: true
+        default: 'error.html'
+env:
+  BUCKET_NAME: website-artifacts
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
+          aws-region: us-east-1
+      - name: Create CloudFormation Stack
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: uda-artifact
+          template: uda_artifact.yml
+          no-fail-on-empty-changeset: "1"
+          
+      - name: Upload files to S3 bucket
+        run: |
+          aws s3 cp ./website/${{ github.event.inputs.index_document }} s3://${{env.BUCKET_NAME}} 
+          aws s3 cp ./website/${{ github.event.inputs.error_document }} s3://${{env.BUCKET_NAME}} 
+
+      - name: Show S3 bucket website URL
+        run: |
+          aws cloudformation describe-stacks \
+            --stack-name uda-artifact \
+            --query 'Stacks[0].Outputs[?OutputKey==`ArtifactBucketWebsiteURL`].OutputValue' \
+            --output text
+
